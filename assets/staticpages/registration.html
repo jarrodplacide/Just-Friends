@@ -1,0 +1,110 @@
+<!doctype html> <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>[[++site_name]] - [[*pagetitle]]</title>
+		<meta name="description" content="[[*description]]">
+
+		<meta name="viewport" content="width=device-width">
+
+		<link rel="stylesheet" href="/assets/css/style.css">
+
+		<!-- Fancybox CSS -->
+		<link rel="stylesheet" href="/assets/fancybox/source/jquery.fancybox.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="/assets/fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen">
+
+		<script src="/assets/js/libs/modernizr-2.5.3.min.js"></script>
+		
+		<!-- Base URL -->
+		<base href="[[++site_url]]" />
+		
+		
+		<!-- Open Graph Tags -->
+		[[!$OpenGraph]]
+	</head>
+	<body id="contentpage">
+		[[!$TopMenu]]
+		<div role="main" id="main">
+			<div id="sidebar">
+				<div id="logo">
+					<img src="/assets/img/logo-white.png" alt="Just Friends The Fun Band" />
+				</div>
+				<div class="text">
+					<h2 class="blue">T&amp;T Carnival 2013</h2>
+				</div>
+				<img src="/assets/img/Broadway-vertical.jpg" alt=""/>
+			</div>
+			<div id="content">
+				<div id="inner">
+					<article>
+						<header id="content_header">
+							<h1>[[*pagetitle]]</h1>
+							<aside class="social">
+								<div id="twitter">
+									<a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out [[*pagetitle]] at JustFriendsTT.com!" data-hashtags="justfriends2013">Tweet</a>
+								</div>
+								<div id="facebook">
+									<div class="fb-like" data-send="true" data-width="420" data-show-faces="true" data-font="tahoma" data-colorscheme="dark"></div>
+								</div>
+							</aside>
+						</header>
+						<section id="body">
+							<h1>Personal Information</h1>
+							<select name="country" id="form_register_country">
+								<option value="1">Trinidad &amp; Tobago</option>
+								<option value="2">USA</option>
+							</select>
+							<form action="/register" method="post" id="form_register">
+								<input type="text" name="fName" id="register_fName" class="inline medium" placeholder="First Name" value="" />
+								<input type="text" name="middleInitial" id="register_middleInitial" class="inline short" placeholder="M.I." value="" />
+								<input type="text" name="lName" id="register_lName" class="inline medium" placeholder="Last Name" value="" />
+								<input type="radio" name="sex" value="male" /><label>Male</label>
+                				<input type="radio" name="sex" value="female" /><label>Female</label>
+								<input type="text" name="streetAddress" id="register_streetAddress" class="long" placeholder="Street Address" value="" />
+								<input type="text" name="city" id="register_city" class="medium inline" placeholder="City" value="" />
+								<div style="display: none;" id="US_fields">
+									<input type="text" name="state" id="register_state" class="short inline" placeholder="State" value="" />
+									<input type="text" name="zipcode" id="register_zipcode" class="short inline" placeholder="Zip Code" value="" />
+								</div>
+								<input type="text" name="country" id="register_country" class="medium" placeholder="Country" value="" />
+								<input type="text" name="email" id="register_email" class="medium" placeholder="E-Mail Address" value="" />
+								<input type="text" name="phone_home" id="register_phone_home" class="medium" placeholder="Home Phone" value="" />
+								<input type="text" name="phone_office" id="register_phone_office" class="medium" placeholder="Office Phone" value="" />
+								<input type="text" name="phone_work" id="register_phone_work" class="medium" placeholder="Work Phone" value="" />
+							</form>
+						</section>
+					</article>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		[[!$BottomMenu]]
+		<div id="fb-root"></div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>
+			window.jQuery || document.write('<script src="/assets/js/libs/jquery-1.7.2.min.js"><\/script>')
+		</script>
+
+		
+		<!-- Fancybox Scripts -->
+		<script src="assets/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+		<script src="assets/fancybox/source/jquery.fancybox.pack.js?v=2.0.4"></script>
+		<script src="assets/fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+
+		<script src="/assets/js/plugins.js"></script>
+		<script src="/assets/js/script.js"></script>
+		<script>
+			var _gaq = [ ['_setAccount', '[[++google_analytics_code]]'], ['_trackPageview'] ]; ( function(d, t) {
+					var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+					g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+					s.parentNode.insertBefore(g, s)
+				}(document, 'script'));
+		</script>
+	</body>
+</html>
