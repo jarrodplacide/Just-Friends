@@ -1,0 +1,494 @@
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body { margin: 0; font-size: 1em; line-height: 1.4; }
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+a { color: inherit; text-decoration: none;}
+a:visited { color: inherit; }
+a:hover { color: inherit; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+svg:not(:root) { overflow: hidden; }
+
+figure { margin: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+button[disabled], input[disabled] { cursor: default; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+
+
+/* ===== Primary Styles ========================================================
+   Author: Jarrod Placide-Raymond
+   ========================================================================== */
+/**Font Inclusions**/
+@font-face {
+    font-family: 'EuphemiaUCASRegular';
+    src: url('/assets/fonts/euphemia_ucas_regular_2.6.6-webfont.eot');
+    src: url('/assets/fonts/euphemia_ucas_regular_2.6.6-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/euphemia_ucas_regular_2.6.6-webfont.woff') format('woff'),
+         url('/assets/fonts/euphemia_ucas_regular_2.6.6-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'EuphemiaUCASBold';
+    src: url('/assets/fonts/euphemia_ucas_bold_2.6.6-webfont.eot');
+    src: url('/assets/fonts/euphemia_ucas_bold_2.6.6-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/euphemia_ucas_bold_2.6.6-webfont.woff') format('woff'),
+         url('/assets/fonts/euphemia_ucas_bold_2.6.6-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'StagMedium';
+	src: url('/assets/fonts/Stag-Medium.eot');
+	src: local('☺'), url('/assets/fonts/Stag-Medium.woff') format('woff'), url('/assets/fonts/Stag-Medium.ttf') format('truetype'), url('/assets/fonts/Stag-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'StagLight';
+	src: url('/assets/fonts/Stag-Light.eot');
+	src: local('☺'), url('/assets/fonts/Stag-Light.woff') format('woff'), url('/assets/fonts/Stag-Light.ttf') format('truetype'), url('/assets/fonts/Stag-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*Base Styles*/
+body {
+	margin: 0;
+	padding: 0;
+	background: #00aeef;
+	min-width: 1282px;
+}
+
+.blue {
+	color: #00AEEF;
+}
+
+/**Structure**/
+header#topmenu {
+	width: 100%;
+	background: #00aeef;
+	height: 60px;
+}
+
+#main {
+	width: 100%;
+	background: #000000 url('/assets/img/lights-bg.jpg') repeat-x 0 0;
+}
+
+#main #sidebar {
+	width: 288px;
+	float: left;
+	background: transparent;
+	position: absolute;
+}
+
+#main #content {
+	width: 100%;
+	background: transparent;
+	min-height: 808px;
+	float: left;
+}
+
+#main #content #inner {
+	margin: 0;
+	padding: 0;
+}
+
+footer {
+	width: 100%;
+	background: #00AEEF;
+	height: 57px;
+}
+
+/**Menus**/
+	/*Top Menu*/
+	#topmenu ul {
+		margin: 0;
+		padding: 16px 61px 0;
+	}
+	
+	#topmenu ul li {
+		margin: 0;
+		padding: 0 10px;
+		width: 120px;
+		list-style: none;
+		display: inline-block;
+		font-family: "EuphemiaUCASBold";
+		font-size: 18px;
+		color: #FFFFFF;
+		text-align: center;
+	}
+	
+	#topmenu ul li.current a {
+		border-bottom: 2px solid #FFFFFF;
+		padding: 0 0 3px;
+	}
+	
+	#topmenu ul li:hover a {
+		border-bottom: 2px dotted #FFFFFF;
+		padding: 0 0 3px;
+	}
+	
+	/*Bottom Menu*/
+	footer {
+		font-family: "EuphemiaUCASRegular";
+	}
+	footer ul#bottommenu {
+		padding: 18px 168px 0;
+		margin: 0;
+		float: left;
+	}
+	
+	#bottommenu li {
+		list-style: none;
+		display: inline-block;
+		width: 72px;
+		text-align: center;
+		color: #FFFFFF;
+		font-size: 12px;
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+	}
+	
+	footer #copyright {
+		float: right;
+		padding: 18px 48px 0 0;
+		margin: 0;
+		text-align: right;
+		color: #FFFFFF;
+		font-size: 12px;
+	}
+	
+/**SideBar**/
+#sidebar #logo {
+	margin: 15px auto;
+	width: 241px;
+}
+
+#sidebar .text {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#sidebar h2 {
+	font-family: "StagMedium";
+	font-size: 24px;
+	font-weight: 100;
+}
+
+/**Preview**/
+#content #preview {
+	margin: 65px 0 0 288px;
+}
+#content #preview #intro {
+	width: 100%;
+	text-align: center;
+}
+
+#intro h2 {
+	font-family: "StagLight";
+	font-size: 24px;
+	color: #FFFFFF;
+	font-weight: 100;
+}
+
+.stagmedium {
+	font-family: "StagMedium";
+	font-weight: 100;
+}
+
+#slider {
+	width: 888px;
+	height: 426px;
+	margin: 0 auto;
+}
+
+
+/*Costume Listing*/
+#costume_summary #content #listing {
+	margin: 65px 0 0 288px;
+	padding: 0 72px;
+}
+#costume_summary #content #listing .section {
+	display: inline-block;
+	width: 242px;
+	height: 425px;
+	margin: 0 45px 50px 0;
+}
+
+#costume_summary #content #listing .section img {
+	margin: 0 0 10px;
+	width: 242px;
+	height: 397px;
+}
+
+#costume_summary #content #listing .section img:hover {
+	border: 2px solid #00aeef;
+}
+
+#costume_summary #content #listing .section h2 {
+	font-family: "StagMedium";
+	font-size: 16px;
+	font-weight: 100;
+	color: #00AEEF;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+/*Section Page*/
+#costume_section #content #section,
+#contentpage #content article {
+	margin: 65px 0 40px 288px;
+	padding: 0 42px;
+}
+
+#costume_section #content #section #section_header,
+#contentpage #content article #content_header {
+	width: 100%;
+	border-bottom: 2px solid #00AEEF;
+}
+
+#costume_section #content #section #section_header h1,
+#contentpage #content article #content_header h1 {
+	display: inline-block;
+	font-family: "StagMedium";
+	font-size: 24px;
+	font-weight: 100;
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+}
+
+#costume_section #content #section #section_header .social,
+#contentpage #content article #content_header .social {
+	display: inline-block;
+	margin: 0 0 0 10px;
+}
+
+#costume_section #content #section #section_header .social div,
+#contentpage #content article #content_header .social div {
+	display: inline-block;
+	padding: 0 10px 0 0;
+	vertical-align: sub;
+}
+
+#costume_section #content #section .slider-wrapper {
+	margin: 17px 72px 0 0;
+	float: left;
+	width: 433px;
+}
+
+#costume_section #content #section #slider {
+	width: 433px;
+	height: 711px;
+}
+
+#costume_section #content #section #section_details {
+	margin: 17px 0 0;
+}
+
+#costume_section #content #section #section_details {
+	color: #FFFFFF;
+}
+
+#costume_section #content #section #section_details .price {
+	font-family: "StagMedium";
+	font-size: 18px;
+	margin: 0 0 10px;
+}
+
+#costume_section #content #section #section_details .extra_details {
+	font-family: Tahoma;
+	font-size: 14px;
+	margin: 0 0 10px;
+}
+
+#costume_section #registerform {
+	display: none;
+}
+
+/**Content Page **/
+#contentpage #content #body {
+	margin: 35px 0 0;
+}
+
+#contentpage #content #body h1 {
+	font-family: "StagMedium";
+	font-size: 18px;
+	font-weight: 100;
+	color: #FFFFFF;
+	padding: 0;
+	margin: 0 0 5px;
+}
+
+#contentpage #content #body h2 {
+	font-family: "StagMedium";
+	font-size: 16px;
+	font-weight: 100;
+	color: #FFFFFF;
+	padding: 0;
+	margin: 0 0 5px;
+	text-decoration: underline;
+}
+
+#contentpage #content #body p {
+	font-family: Tahoma;
+	font-size: 14px;
+	color: #FFFFFF;
+	padding: 0;
+	margin: 0 0 5px;
+}
+
+#contentpage #content #body input[type="text"],
+#contentpage #content #body select {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #00aeef;
+	font-size: 14px;
+	font-family: Tahoma;
+	-webkit-box-shadow: inset 4px 4px 6px 0px rgba(0, 0, 0, .75);
+	box-shadow: inset 4px 4px 6px 0px rgba(0, 0, 0, .75);
+	padding: 8px 13px;
+	border: none;
+	outline: none;
+	margin: 0 10px 5px;
+	display: block;
+}
+
+#contentpage #content #body input[input="text"].inline {
+	display: inline-block;
+}
+
+#contentpage #content #body input[text="text"].short {
+	width: 40px;
+}
+
+#contentpage #content #body input[text="text"].medium {
+	width: 160px;
+}
+
+#contentpage #content #body input[text="text"].long {
+	width: 350px;
+}
+
+#contentpage #content #body input[type="text"]:focus {
+	border: 2px solid #00AEEF;
+	-webkit-box-shadow: 2px 2px 6px 2px #00aeef;
+	box-shadow: 0 0x 8px 1px #00aeef;
+}
+
+#contentpage #content #body input[type="image"] {
+	display: block;
+}
+
+#contentpage #content #body a {
+	text-decoration: underline;
+	color: #00AEEF;
+}
+
+
+
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+	/* Style adjustments for viewports that meet the condition */
+}
+
+/* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/* =============================================================================
+   Print Styles
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
