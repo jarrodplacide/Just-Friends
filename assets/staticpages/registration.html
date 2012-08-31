@@ -20,11 +20,10 @@
 		<link rel="stylesheet" href="/assets/fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen">
 
 		<script src="/assets/js/libs/modernizr-2.5.3.min.js"></script>
-		
+
 		<!-- Base URL -->
 		<base href="[[++site_url]]" />
-		
-		
+
 		<!-- Open Graph Tags -->
 		[[!$OpenGraph]]
 	</head>
@@ -55,28 +54,45 @@
 							</aside>
 						</header>
 						<section id="body">
-							<h1>Personal Information</h1>
-							<select name="country" id="form_register_country">
-								<option value="1">Trinidad &amp; Tobago</option>
-								<option value="2">USA</option>
-							</select>
-							<form action="/register" method="post" id="form_register">
-								<input type="text" name="fName" id="register_fName" class="inline medium" placeholder="First Name" value="" />
-								<input type="text" name="middleInitial" id="register_middleInitial" class="inline short" placeholder="M.I." value="" />
-								<input type="text" name="lName" id="register_lName" class="inline medium" placeholder="Last Name" value="" />
-								<input type="radio" name="sex" value="male" /><label>Male</label>
-                				<input type="radio" name="sex" value="female" /><label>Female</label>
-								<input type="text" name="streetAddress" id="register_streetAddress" class="long" placeholder="Street Address" value="" />
-								<input type="text" name="city" id="register_city" class="medium inline" placeholder="City" value="" />
-								<div style="display: none;" id="US_fields">
-									<input type="text" name="state" id="register_state" class="short inline" placeholder="State" value="" />
-									<input type="text" name="zipcode" id="register_zipcode" class="short inline" placeholder="Zip Code" value="" />
+							<form action="/register" method="post" id="form_register" data-personalinfo="incomplete" data-sectioninfo="incomplete" data=measurementsinfo="incomplete">
+								<div id="personalinfo">
+									<h1>Personal Information</h1>
+									<select name="preliminary_country" id="form_register_country">
+										<option value="1">Trinidad &amp; Tobago</option>
+										<option value="2">USA</option>
+									</select>
+									<input type="text" name="fName" id="register_fName" class="inline medium" placeholder="First Name" value="" />
+									<input type="text" name="middleInitial" id="register_middleInitial" class="inline short" placeholder="M.I." value="" />
+									<input type="text" name="lName" id="register_lName" class="inline medium" placeholder="Last Name" value="" />
+									<input type="radio" name="sex" value="male" />
+									<label>Male</label>
+									<input type="radio" name="sex" value="female" />
+									<label>Female</label>
+									<input type="text" name="streetAddress" id="register_streetAddress" class="long" placeholder="Street Address" value="" />
+									<input type="text" name="city" id="register_city" class="medium inline" placeholder="City" value="" />
+									<div style="display: none;" id="US_fields">
+										<input type="text" name="state" id="register_state" class="short inline" placeholder="State" value="" />
+										<input type="text" name="zipcode" id="register_zipcode" class="short inline" placeholder="Zip Code" value="" />
+									</div>
+									<input type="text" name="country" id="register_country" class="medium" placeholder="Country" value="" />
+									<input type="text" name="email" id="register_email" class="medium" placeholder="E-Mail Address" value="" />
+									<input type="text" name="phone_home" id="register_phone_home" class="medium" placeholder="Home Phone" value="" />
+									<input type="text" name="phone_office" id="register_phone_office" class="medium" placeholder="Office Phone" value="" />
+									<input type="text" name="phone_work" id="register_phone_work" class="medium" placeholder="Work Phone" value="" />
 								</div>
-								<input type="text" name="country" id="register_country" class="medium" placeholder="Country" value="" />
-								<input type="text" name="email" id="register_email" class="medium" placeholder="E-Mail Address" value="" />
-								<input type="text" name="phone_home" id="register_phone_home" class="medium" placeholder="Home Phone" value="" />
-								<input type="text" name="phone_office" id="register_phone_office" class="medium" placeholder="Office Phone" value="" />
-								<input type="text" name="phone_work" id="register_phone_work" class="medium" placeholder="Work Phone" value="" />
+								<div id="sectioninfo">
+									<h1>Section Info</h1>
+									<label><p>Please select your section: </p></label>
+									<select name="section" id="register_section">
+										<option value="mammamia">Mamma Mia</option>
+										<option value="mammamia">Mamma Mia</option>
+										<option value="mammamia">Mamma Mia</option>
+										<option value="mammamia">Mamma Mia</option>
+										<option value="mammamia">Mamma Mia</option>
+										<option value="mammamia">Mamma Mia</option>
+										<option value="mammamia">Mamma Mia</option>
+									</select>
+								</div>
 							</form>
 						</section>
 					</article>
@@ -91,7 +107,6 @@
 			window.jQuery || document.write('<script src="/assets/js/libs/jquery-1.7.2.min.js"><\/script>')
 		</script>
 
-		
 		<!-- Fancybox Scripts -->
 		<script src="assets/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 		<script src="assets/fancybox/source/jquery.fancybox.pack.js?v=2.0.4"></script>
@@ -100,7 +115,8 @@
 		<script src="/assets/js/plugins.js"></script>
 		<script src="/assets/js/script.js"></script>
 		<script>
-			var _gaq = [ ['_setAccount', '[[++google_analytics_code]]'], ['_trackPageview'] ]; ( function(d, t) {
+			var _gaq = [['_setAccount', '[[++google_analytics_code]]'], ['_trackPageview']];
+			( function(d, t) {
 					var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
 					g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
 					s.parentNode.insertBefore(g, s)
